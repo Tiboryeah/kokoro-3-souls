@@ -18,6 +18,19 @@ window.addEventListener('scroll', revealOnScroll);
 // Initial check
 revealOnScroll();
 
+// Mobile Menu Toggle
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links');
+
+if (mobileMenuBtn) {
+  mobileMenuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    const icon = mobileMenuBtn.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-times');
+  });
+}
+
 // Smooth scroll for nav links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -25,6 +38,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth'
     });
+    // Close mobile menu after click
+    if (navLinks.classList.contains('active')) {
+      navLinks.classList.remove('active');
+      const icon = mobileMenuBtn.querySelector('i');
+      icon.classList.add('fa-bars');
+      icon.classList.remove('fa-times');
+    }
   });
 });
 
