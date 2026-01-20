@@ -904,7 +904,8 @@ footer {
 /* Mobile (768px) */
 @media (max-width: 768px) {
     body {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        font-weight: 300;
     }
 
     /* Mobile Menu */
@@ -941,32 +942,35 @@ footer {
         top: 0 !important;
         width: 100% !important;
         border-radius: 0 !important;
-        padding: 0.5rem 1.5rem !important;
+        padding: 0.5rem 1rem !important;
         background: rgba(5, 5, 8, 0.9) !important;
         border: none !important;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
     }
 
     .logo-img {
-        height: 80px !important;
+        height: 90px !important;
         margin: 0 !important;
     }
 
     /* Hero */
     .hero {
-        padding: 120px 5% 60px 5%;
+        padding: 140px 8% 60px 8%;
     }
 
     .hero h1 {
-        font-size: 3.8rem;
+        font-size: 3.2rem;
+        line-height: 1.1;
     }
 
     .hero .subtitle {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
     }
 
     .hero .description {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
+        line-height: 1.5;
     }
 
     /* Layouts */
@@ -974,55 +978,83 @@ footer {
     .status-grid,
     .roles-grid {
         grid-template-columns: 1fr;
+        gap: 2.5rem;
     }
 
     .section-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         margin-bottom: 2rem;
     }
 
+    .about-text h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
     .character-card {
-        height: 500px;
+        height: 480px;
     }
 
     .character-card h4 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .release-info {
         grid-template-columns: 1fr;
-        padding: 2rem;
+        padding: 1.5rem;
         gap: 2rem;
     }
 
     .contact-methods {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
     }
 
     .contact-card {
         width: 100%;
-        max-width: 320px;
+        max-width: 100%;
+        padding: 1.5rem;
     }
 }
 
 /* Very Small Devices (480px) */
 @media (max-width: 480px) {
+    nav {
+        padding: 0.5rem 0.8rem !important;
+    }
+
+    .logo-img {
+        height: 80px !important;
+    }
+
     .hero h1 {
-        font-size: 2.8rem;
+        font-size: 2.6rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1.1rem;
     }
 
     .section-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
+    }
+
+    .about-text h3 {
+        font-size: 1.6rem;
     }
 
     .adult-warning span {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         display: block;
         line-height: 1.4;
     }
 
     .character-card {
-        height: 450px;
+        height: 420px;
+    }
+
+    .status-card {
+        padding: 1.5rem;
     }
 }
