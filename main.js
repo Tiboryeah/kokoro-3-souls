@@ -53,3 +53,21 @@ window.addEventListener('scroll', () => {
     logo.style.height = '200px';
   }
 });
+
+// FAQ Accordion
+document.querySelectorAll('.faq-question').forEach(question => {
+  question.addEventListener('click', () => {
+    const item = question.parentElement;
+    const isActive = item.classList.contains('active');
+
+    // Close other items
+    document.querySelectorAll('.faq-item').forEach(otherItem => {
+      otherItem.classList.remove('active');
+    });
+
+    // Toggle current item
+    if (!isActive) {
+      item.classList.add('active');
+    }
+  });
+});
