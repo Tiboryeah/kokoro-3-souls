@@ -985,7 +985,7 @@ footer {
     }
 
     .character-card {
-        height: 480px;
+        height: auto;
     }
 
     .character-card h4 {
@@ -1044,7 +1044,7 @@ footer {
     }
 
     .character-card {
-        height: 420px;
+        height: auto;
     }
 
     .status-card {
