@@ -184,20 +184,33 @@ body {
 
 .script-content {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: #cbd5e1;
     white-space: pre-wrap;
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.3);
+    padding: 2.5rem;
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 12px;
     border-left: 4px solid var(--accent-magenta);
+    text-align: left;
+    line-height: 1.5;
 }
 
-.character-voice {
+.scene-tag {
     color: var(--accent-magenta);
     font-weight: bold;
     display: block;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.scene-tag:first-child {
+    margin-top: 0;
+}
+
+.scene-tag.highlight {
+    color: #ff4d4d;
+    text-shadow: 0 0 10px rgba(255, 77, 77, 0.3);
 }
 
 /* CTA Button */
