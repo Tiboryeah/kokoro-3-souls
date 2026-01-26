@@ -248,3 +248,32 @@ body {
         font-size: 3rem;
     }
 }
+
+/* Contact Pills */
+.contact-pill {
+    background: #0d0d12;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 28px;
+    border-radius: 50px;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.contact-pill i {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.contact-pill:hover {
+    background: #1a1a24;
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
