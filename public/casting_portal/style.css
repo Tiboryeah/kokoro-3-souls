@@ -186,8 +186,8 @@ body {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.1rem;
     color: #cbd5e1;
-    white-space: pre-wrap;
-    padding: 1rem;
+    white-space: pre-line;
+    padding: 1.5rem;
     background: rgba(0, 0, 0, 0.3);
     border-radius: 12px;
     border-left: 4px solid var(--accent-magenta);
