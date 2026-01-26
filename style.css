@@ -281,23 +281,29 @@ section {
 .character-card {
     position: relative;
     overflow: hidden;
-    height: 700px;
-    /* Un poco más de altura para más elegancia */
-    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    /* Altura automática para que el texto quepa debajo */
+    border-radius: 20px;
     cursor: pointer;
-    background-color: #fff;
-    /* Fondo blanco para las siluetas actuales */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: rgba(20, 20, 20, 0.8);
+    /* Fondo oscuro premium */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.5s ease;
+}
+
+.character-card:hover {
+    border-color: var(--accent-pink);
+    transform: translateY(-10px);
 }
 
 .character-card img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
-    /* Para que la silueta no se corte */
-    padding-bottom: 150px;
-    /* Espacio para que el texto no tape la silueta */
+    height: auto;
+    display: block;
+    object-fit: cover;
     transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -306,38 +312,25 @@ section {
 }
 
 .character-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 3.5rem 2rem 2.5rem;
-    background: linear-gradient(to top,
-            rgba(5, 5, 5, 1) 0%,
-            rgba(5, 5, 5, 0.98) 60%,
-            rgba(5, 5, 5, 0.8) 80%,
-            transparent 100%);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    transform: translateY(0);
-}
-
-.character-card:hover .character-info {
-    padding-top: 4rem;
+    position: relative;
+    /* Cambiado de absolute a relative para que quede DEBAJO */
+    padding: 2.5rem 2rem;
+    background: transparent;
+    /* Eliminamos el degradado que tapaba la foto */
+    text-align: left;
 }
 
 .character-info h4 {
-    font-size: 2.5rem;
-    margin-bottom: 0.8rem;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
     color: var(--accent-pink);
     font-family: 'Playfair Display', serif;
-    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
 }
 
 .character-info p {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 300;
-    color: rgba(255, 255, 255, 0.95);
+    color: rgba(255, 255, 255, 0.8);
     line-height: 1.6;
 }
 
