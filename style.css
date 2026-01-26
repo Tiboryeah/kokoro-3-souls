@@ -50,18 +50,18 @@ h3 {
 
 /* Adult Warning */
 .adult-warning {
-    background: rgba(255, 45, 85, 0.12);
+    background: rgba(255, 45, 85, 0.15);
     color: var(--accent-pink);
     text-align: center;
-    padding: 0.8rem;
-    font-size: 0.95rem;
+    padding: 0.5rem;
+    font-size: 0.85rem;
     font-weight: 500;
     border-bottom: 1px solid rgba(255, 45, 85, 0.2);
     backdrop-filter: blur(10px);
-    position: relative;
-    z-index: 500;
-    /* Por debajo de la navbar */
+    width: 100%;
     letter-spacing: 0.05em;
+    position: relative;
+    /* Cambiado de fixed para que respete el flujo */
 }
 
 .adult-warning i {
@@ -71,38 +71,39 @@ h3 {
 /* Navbar */
 nav {
     position: fixed;
-    top: 65px;
-    /* Comienza debajo de la advertencia */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 96%;
-    max-width: 2200px;
-    padding: 0.1rem 5rem;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     z-index: 1000;
-    background: rgba(10, 10, 12, 0.7);
-    backdrop-filter: blur(25px) saturate(200%);
-    -webkit-backdrop-filter: blur(25px) saturate(200%);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 20px;
-    /* Estilo panel moderno */
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.logo-img {
-    height: 200px;
-    /* Tamaño impactante y premium */
-    margin-top: -20px;
-    margin-bottom: -20px;
-    filter: drop-shadow(0 0 15px rgba(255, 45, 85, 0.4));
+    background: rgba(5, 5, 8, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.logo-img:hover {
-    transform: translateY(-5px) scale(1.05);
-    filter: drop-shadow(0 0 25px var(--accent-pink));
+nav.scrolled {
+    background: rgba(5, 5, 8, 0.95);
+    padding: 5px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.nav-content {
+    width: 100%;
+    max-width: 1400px;
+    /* Reducido para que se vea más elegante y recogido */
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: center;
+    /* Centrado ya que no hay logo */
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+nav.scrolled .nav-content {
+    padding: 0.8rem 2rem;
 }
 
 .nav-links {
@@ -114,16 +115,35 @@ nav {
 .nav-links a {
     text-decoration: none;
     color: var(--text-color);
-    font-size: 1.1rem;
-    /* Más legible */
+    font-size: 0.95rem;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
-    font-weight: 400;
-    transition: color 0.3s ease;
+    letter-spacing: 0.25em;
+    font-weight: 500;
+    opacity: 0.7;
+    transition: all 0.4s ease;
+    position: relative;
+    padding: 5px 0;
 }
 
 .nav-links a:hover {
     color: var(--accent-pink);
+    opacity: 1;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: var(--accent-pink);
+    transition: all 0.4s ease;
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 .mobile-menu-btn {
@@ -149,12 +169,13 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 120px 10% 80px 10%;
-    /* Espacio para el logo flotante */
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('/assets/hero-bg.png');
+    padding: 450px 10% 80px 10%;
+    /* Reajustado para no excederse */
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url('/assets/hero-bg-2.jpg');
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-position: center 0%;
+    /* Volvemos al tope para ver las cabezas */
+    background-attachment: scroll;
 }
 
 .hero h1 {
@@ -935,20 +956,23 @@ footer {
         top: 0 !important;
         width: 100% !important;
         border-radius: 0 !important;
-        padding: 0.5rem 1rem !important;
-        background: rgba(5, 5, 8, 0.9) !important;
+        padding: 0 !important;
+        /* El padding viene del nav-content */
+        background: rgba(5, 5, 8, 1) !important;
         border: none !important;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
     }
 
-    .logo-img {
-        height: 90px !important;
-        margin: 0 !important;
+    .nav-content {
+        padding: 0.8rem 1.5rem;
+        justify-content: flex-end;
+        /* Mobile menu al final sin logo */
     }
 
     /* Hero */
     .hero {
-        padding: 140px 8% 60px 8%;
+        padding: 160px 8% 60px 8%;
+        /* Más espacio por la nav fija */
     }
 
     .hero h1 {
@@ -1014,11 +1038,11 @@ footer {
 /* Very Small Devices (480px) */
 @media (max-width: 480px) {
     nav {
-        padding: 0.5rem 0.8rem !important;
+        padding: 0 !important;
     }
 
-    .logo-img {
-        height: 80px !important;
+    .nav-content {
+        padding: 0.6rem 1rem;
     }
 
     .hero h1 {

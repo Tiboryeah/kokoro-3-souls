@@ -48,29 +48,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Parallax effect for hero and Navbar shrink
+// Navbar shrink on scroll
 window.addEventListener('scroll', () => {
   const scrolled = window.scrollY;
-  const hero = document.querySelector('.hero');
   const nav = document.querySelector('nav');
-  const logo = document.querySelector('.logo-img');
-
-  hero.style.backgroundPositionY = -(scrolled * 0.5) + 'px';
 
   if (scrolled > 50) {
-    nav.style.padding = '0.5rem 5rem';
-    nav.style.top = '0';
-    nav.style.width = '100%';
-    nav.style.borderRadius = '0';
-    nav.style.background = 'rgba(5, 5, 8, 0.95)';
-    logo.style.height = '100px';
+    nav.classList.add('scrolled');
   } else {
-    nav.style.padding = '0.1rem 5rem';
-    nav.style.top = '65px';
-    nav.style.width = '96%';
-    nav.style.borderRadius = '20px';
-    nav.style.background = 'rgba(10, 10, 12, 0.7)';
-    logo.style.height = '200px';
+    nav.classList.remove('scrolled');
   }
 });
 
