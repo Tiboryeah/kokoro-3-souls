@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casting - Kokoro: 3 Souls</title>
+    <meta name="description"
+        content="Únete al elenco de Kokoro: 3 Souls. Buscamos actrices de voz para dar vida a personajes inolvidables.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+
+    <header class="hero">
+        <h1>Voices of Kokoro</h1>
+        <p>Buscamos las almas que darán voz a nuestra historia. Una experiencia cinemática, oscura y profundamente
+            emocional.</p>
+        <a href="#characters" class="btn btn-primary">Ver Personajes</a>
+    </header>
+
+    <section id="characters" class="section">
+        <h2 class="section-title">PERSONAJES DISPONIBLES</h2>
+        <div class="char-grid">
+            <!-- Morgan -->
+            <div class="char-card">
+                <span class="char-status">Abierto</span>
+                <h3 class="char-name">Morgan</h3>
+                <p class="char-desc">Cerebral, dominante y controlada. Es una mujer que observa antes de atacar. Su voz
+                    debe ser pausada, elegante y con un matiz de misterio peligroso.</p>
+                <div class="char-meta">
+                    <strong>Rango:</strong> Medio-Bajo (Sophisticated)<br>
+                    <strong>Edad:</strong> 22-26 años
+                </div>
+            </div>
+
+            <!-- Victoria -->
+            <div class="char-card">
+                <span class="char-status">Abierto</span>
+                <h3 class="char-name">Victoria</h3>
+                <p class="char-desc">Directa, energética y un poco desafiante. Tiene un carácter fuerte pero esconde una
+                    vulnerabilidad que solo sale en momentos clave.</p>
+                <div class="char-meta">
+                    <strong>Rango:</strong> Medio (Energetic)<br>
+                    <strong>Edad:</strong> 20-25 años
+                </div>
+            </div>
+
+            <!-- Susy -->
+            <div class="char-card">
+                <span class="char-status">Abierto</span>
+                <h3 class="char-name">Susy</h3>
+                <p class="char-desc">Cálida, empática e inocente... en apariencia. Su voz debe transmitir confort pero
+                    dejar una sensación de que hay algo más bajo la superficie.</p>
+                <div class="char-meta">
+                    <strong>Rango:</strong> Medio-Alto (Sweet)<br>
+                    <strong>Edad:</strong> 18-23 años
+                </div>
+            </div>
+
+            <!-- Discord Girl -->
+            <div class="char-card">
+                <span class="char-status">Abierto</span>
+                <h3 class="char-name">??? (User_404)</h3>
+                <p class="char-desc">Misteriosa, juguetona y manipuladora. Solo se comunica a través de notas de voz. Su
+                    tono cambia de lo tierno a lo perturbador en segundos.</p>
+                <div class="char-meta">
+                    <strong>Rango:</strong> Versátil<br>
+                    <strong>Edad:</strong> Desconocida
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">EJEMPLO DE GUION (AUDICIÓN)</h2>
+        <div class="script-container">
+            <div class="script-header">
+                <span class="script-tag">AUDITION_CLIP_01</span>
+                <button class="btn" style="padding: 8px 20px; font-size: 0.8rem; background: var(--glass);"
+                    onclick="copyScript()">Copiar Texto</button>
+            </div>
+            <div class="script-content" id="sample-script">
+                <span class="character-voice">[ESCENA: CAFETERÍA - MORGAN]</span>
+                (Morgan pasa la página de su libro lentamente, sin mirar al protagonista)
+
+                MORGAN: — Si vas a quedarte ahí parado... siéntate.
+                (Pausa. Levanta la vista lentamente, sus ojos son fríos y analíticos)
+                No es una invitación. Es una orden.
+                ¿Sabes? Te pusiste nervioso demasiado rápido. Eso suele delatar cosas... interesantes.
+
+                <span class="character-voice">[ESCENA: NOTA DE VOZ - ???]</span>
+                (Tono susurrado, muy cerca del micrófono, con un toque de melancolía juguetona)
+
+                ???: — No sé qué hiciste hoy... pero te siento lejos.
+                (Risa leve, casi imperceptible)
+                Dime si estoy imaginando cosas. O dime exactamente en qué estás pensando ahora mismo.
+                Apuesto a que es en mí.
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="text-align: center;">
+        <h2 class="section-title">¿LISTA PARA EMPEZAR?</h2>
+        <p>Envía tu reel de voz o una grabación del guion de arriba a:</p>
+        <p style="font-size: 1.5rem; color: var(--accent-blue); margin-top: 1rem; font-weight: bold;">
+            cast@kokoro-game.com</p>
+        <p style="margin-top: 2rem; opacity: 0.6;">Kokoro: 3 Souls Team © 2026</p>
+    </section>
+
+    <script>
+        function copyScript() {
+            const text = document.getElementById('sample-script').innerText;
+            navigator.clipboard.writeText(text);
+            alert('Guion copiado al portapapeles');
+        }
+    </script>
+</body>
+
+</html>
