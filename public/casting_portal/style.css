@@ -524,4 +524,74 @@ body {
         width: 100%;
         justify-content: center;
     }
+
+    .sponsor-footer {
+        margin: 3rem 1rem 1rem;
+        padding: 1.5rem;
+        border-radius: 18px;
+    }
+
+    .sponsor-link {
+        font-size: 1.2rem;
+    }
+
+    .sponsor-disclaimer {
+        font-size: 0.8rem;
+    }
+}
+
+/* Sponsor Section */
+.sponsor-footer {
+    max-width: 700px;
+    margin: 4rem auto 2rem;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    text-align: center;
+    backdrop-filter: blur(15px);
+}
+
+.sponsor-tag {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: rgba(0, 210, 255, 0.1);
+    color: var(--accent-blue);
+    padding: 5px 15px;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.sponsor-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--accent-magenta);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.sponsor-link:hover {
+    text-shadow: 0 0 25px var(--accent-magenta);
+    transform: scale(1.05);
+    color: #fff;
+}
+
+.sponsor-link i {
+    font-size: 1.6rem;
+}
+
+.sponsor-disclaimer {
+    font-size: 0.85rem;
+    opacity: 0.4;
+    line-height: 1.6;
+    color: var(--text-main);
+    max-width: 550px;
+    margin: 0 auto;
 }
