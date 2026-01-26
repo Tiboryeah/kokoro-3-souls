@@ -184,13 +184,15 @@ body {
 
 .script-content {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #cbd5e1;
     white-space: pre-line;
-    padding: 1.5rem;
+    padding: 2rem;
+    line-height: 1.8;
     background: rgba(0, 0, 0, 0.3);
     border-radius: 12px;
     border-left: 4px solid var(--accent-magenta);
+    text-align: left;
 }
 
 .script-scene-tag {
@@ -201,8 +203,8 @@ body {
     border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 800;
-    margin-bottom: 1rem;
-    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
     letter-spacing: 1px;
 }
 
@@ -255,6 +257,123 @@ body {
     }
 }
 
+/* Process Section */
+.process-container {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 40px;
+    margin-top: 4rem;
+    padding: 4rem 2rem;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 3rem;
+}
+
+.process-step {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+}
+
+.step-num {
+    color: var(--accent-magenta);
+    font-size: 3.5rem;
+    font-weight: 800;
+    opacity: 0.2;
+    margin-bottom: -1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.process-step h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1.5px;
+    color: #fff;
+}
+
+.process-step p {
+    opacity: 0.7;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* Security Commitment */
+.security-commitment {
+    border: 1px solid rgba(255, 0, 150, 0.2);
+    padding: 4rem 2rem;
+    border-radius: 40px;
+    background: radial-gradient(circle at center, rgba(255, 0, 150, 0.03), transparent);
+    text-align: center;
+    margin-top: 4rem;
+    transition: border-color 0.4s ease;
+}
+
+.security-commitment:hover {
+    border-color: rgba(255, 0, 150, 0.5);
+}
+
+.security-commitment i {
+    font-size: 3rem;
+    color: var(--accent-magenta);
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 0 10px rgba(255, 0, 150, 0.3));
+}
+
+.security-commitment h2 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.security-commitment p {
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.8;
+    line-height: 1.9;
+    font-size: 1.05rem;
+}
+
+/* Contact Pills Section */
+.contact-pill-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.contact-pill {
+    background: #0d0d12;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 14px 32px;
+    border-radius: 50px;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-pill i {
+    font-size: 1.2rem;
+}
+
+.contact-pill:hover {
+    background: #1a1a24;
+    border-color: var(--accent-magenta);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(255, 0, 150, 0.2);
+}
+
 /* Mobile Adjustments */
 @media (max-width: 768px) {
     .section {
@@ -264,33 +383,4 @@ body {
     .hero h1 {
         font-size: 3rem;
     }
-}
-
-/* Contact Pills */
-.contact-pill {
-    background: #0d0d12;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 12px 28px;
-    border-radius: 50px;
-    color: #fff;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-}
-
-.contact-pill i {
-    font-size: 1.1rem;
-    opacity: 0.9;
-}
-
-.contact-pill:hover {
-    background: #1a1a24;
-    border-color: rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
