@@ -146,6 +146,32 @@ nav.scrolled .nav-content {
     width: 100%;
 }
 
+.patreon-nav {
+    color: var(--accent-magenta) !important;
+    /* Force color to override default link color */
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.patreon-nav i {
+    font-size: 1.1rem;
+}
+
+.patreon-nav:hover {
+    color: #fff !important;
+    text-shadow: 0 0 15px var(--accent-magenta);
+    transform: translateY(-2px);
+}
+
+.patreon-nav::after {
+    display: none !important;
+    /* No underline for this special link */
+}
+
 .mobile-menu-btn {
     display: none;
     background: none;
@@ -216,7 +242,7 @@ nav.scrolled .nav-content {
     padding: 1rem 2.5rem;
     background: transparent;
     border: 1px solid var(--accent-pink);
-    color: #fff;
+    color: var(--accent-pink);
     text-transform: uppercase;
     letter-spacing: 0.3em;
     font-size: 0.8rem;
