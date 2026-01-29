@@ -197,7 +197,7 @@ nav.scrolled .nav-content {
     text-align: center;
     padding: 450px 10% 80px 10%;
     /* Reajustado para no excederse */
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url('/assets/hero-bg-2.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url('/assets/hero-bg.png');
     background-size: cover;
     background-position: center 0%;
     /* Volvemos al tope para ver las cabezas */
